@@ -11,20 +11,22 @@ import XCTest
 class TestUIViewConstraints: XCTestCase {
     
     private var sut: UIView!
-    private var testVC: UIViewController!
+    private var parentView: UIView!
     
     override func setUp() {
         super.setUp()
         
         self.sut = UIView()
-        self.testVC = UIViewController()
+        self.sut.set(identifier: "sut_View")
+        self.parentView = UIView()
+        self.parentView.set(identifier: "parent_View")
     }
     
     override func tearDown() {
         super.tearDown()
         
         self.sut = nil
-        self.testVC = nil
+        self.parentView = nil
     }
     
 }
@@ -34,24 +36,20 @@ extension TestUIViewConstraints {
     func test_UIView_addInVCView_success() {
         
         self.sut
-            .add(to: self.testVC.view)
-            
-        self.testVC.loadViewIfNeeded()
+            .add(to: self.parentView)
         
-        XCTAssertTrue(self.sut.isDescendant(of: self.testVC.view))
+        XCTAssertTrue(self.sut.isDescendant(of: self.parentView))
         
     }
     
     func test_UIView_addInVCView_WithSameSize_success() {
         
         self.sut
-            .add(to: self.testVC.view)
-            .allAnchorsSame(on: self.testVC.view)
+            .add(to: self.parentView)
+            .allAnchorsSame(on: self.parentView)
         
-        self.testVC.view.layoutIfNeeded()
-        
-        XCTAssertTrue(self.sut.isDescendant(of: self.testVC.view))
-        XCTAssertEqual(self.sut.bounds, self.testVC.view.bounds)
+        XCTAssertTrue(self.sut.isDescendant(of: self.parentView))
+        XCTAssertEqual(self.sut.bounds, self.parentView.bounds)
     }
     
     func test_UIView_addInVCView_FixedWidthAndHeight_success() {
@@ -59,14 +57,12 @@ extension TestUIViewConstraints {
         let fixedSize: CGFloat = 200
         
         self.sut
-            .add(to: self.testVC.view)
-            .top(with: self.testVC.view.topAnchor)
-            .leading(with: self.testVC.view.leadingAnchor)
+            .add(to: self.parentView)
+            .top(with: self.parentView.topAnchor)
+            .leading(with: self.parentView.leadingAnchor)
             .with(width: fixedSize, height: fixedSize)
         
-        self.testVC.view.layoutIfNeeded()
-        
-        XCTAssertTrue(self.sut.isDescendant(of: self.testVC.view))
+        XCTAssertTrue(self.sut.isDescendant(of: self.parentView))
         XCTAssertEqual(self.sut.bounds.width, fixedSize)
         XCTAssertEqual(self.sut.bounds.height, fixedSize)
     }
