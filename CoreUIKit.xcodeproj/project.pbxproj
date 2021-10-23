@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1329872C2724262E00F51F1F /* Int+TypeConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1329872B2724262E00F51F1F /* Int+TypeConversion.swift */; };
+		1329872F27242DDA00F51F1F /* TestUILayoutGuideConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1329872D27242DD500F51F1F /* TestUILayoutGuideConstraints.swift */; };
 		134E17A626E29C320057F70C /* UIVIew+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134E17A526E29C320057F70C /* UIVIew+Constraints.swift */; };
 		1354C54826F7645D00C8294C /* TestUIViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */; };
 		1368BF48271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1329872B2724262E00F51F1F /* Int+TypeConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+TypeConversion.swift"; sourceTree = "<group>"; };
+		1329872D27242DD500F51F1F /* TestUILayoutGuideConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUILayoutGuideConstraints.swift; sourceTree = "<group>"; };
 		134E17A526E29C320057F70C /* UIVIew+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Constraints.swift"; sourceTree = "<group>"; };
 		1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUIViewConstraints.swift; sourceTree = "<group>"; };
 		1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Constraints.swift"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				13ED670A26F713B6008F2DE4 /* TestBaseTableView.swift */,
 				136B5435271B27ED002297C3 /* TestBaseCollectionView.swift */,
 				1354C54726F7645D00C8294C /* TestUIViewConstraints.swift */,
+				1329872D27242DD500F51F1F /* TestUILayoutGuideConstraints.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				13ED670B26F713B6008F2DE4 /* TestBaseTableView.swift in Sources */,
 				136B5436271B27ED002297C3 /* TestBaseCollectionView.swift in Sources */,
 				1354C54826F7645D00C8294C /* TestUIViewConstraints.swift in Sources */,
+				1329872F27242DDA00F51F1F /* TestUILayoutGuideConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@ extension UILayoutGuide: Anchorable {
     /// - Returns: current view
     @discardableResult
     public func add(to parentView: UIView) -> Self {
+        if parentView.layoutGuides.contains(where: { $0.identifier == self.identifier }) { return self }
+        
         // Add
         parentView.addLayoutGuide(self)
         
