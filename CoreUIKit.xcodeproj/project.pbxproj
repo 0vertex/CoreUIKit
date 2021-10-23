@@ -12,6 +12,7 @@
 		1368BF48271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */; };
 		1368BF4A271BDE1000EA7595 /* Anchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368BF49271BDE1000EA7595 /* Anchorable.swift */; };
 		136B5436271B27ED002297C3 /* TestBaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B5435271B27ED002297C3 /* TestBaseCollectionView.swift */; };
+		1378266F2724009D00979A0F /* AnchorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378266E2724009D00979A0F /* AnchorType.swift */; };
 		139E090726E13BB900A72A24 /* CoreUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139E08FD26E13BB900A72A24 /* CoreUIKit.framework */; };
 		139E090E26E13BB900A72A24 /* CoreUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 139E090026E13BB900A72A24 /* CoreUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		139E092826E13CE600A72A24 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E092726E13CE600A72A24 /* BaseView.swift */; };
@@ -45,6 +46,7 @@
 		1368BF47271BDCFB00EA7595 /* UILayoutGuide+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutGuide+Constraints.swift"; sourceTree = "<group>"; };
 		1368BF49271BDE1000EA7595 /* Anchorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anchorable.swift; sourceTree = "<group>"; };
 		136B5435271B27ED002297C3 /* TestBaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseCollectionView.swift; sourceTree = "<group>"; };
+		1378266E2724009D00979A0F /* AnchorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorType.swift; sourceTree = "<group>"; };
 		139E08FD26E13BB900A72A24 /* CoreUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		139E090026E13BB900A72A24 /* CoreUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreUIKit.h; sourceTree = "<group>"; };
 		139E090126E13BB900A72A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				13ECCC02271A8024000DAD01 /* ConstraintRelation.swift */,
 				13ECCC08271A8A3B000DAD01 /* ConstraintRelatable.swift */,
 				1368BF49271BDE1000EA7595 /* Anchorable.swift */,
+				1378266E2724009D00979A0F /* AnchorType.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				13ECCC03271A8024000DAD01 /* ConstraintRelation.swift in Sources */,
 				13ECCC0F271AA7A6000DAD01 /* BaseCollectionView.swift in Sources */,
 				13ECCC0C271A998E000DAD01 /* UIEdgeInsets+Inits.swift in Sources */,
+				1378266F2724009D00979A0F /* AnchorType.swift in Sources */,
 				13ECCC09271A8A3B000DAD01 /* ConstraintRelatable.swift in Sources */,
 				13ECCC05271A80FE000DAD01 /* NSLayoutXAxisAnchor+ConstraintRelation.swift in Sources */,
 				139E093026E1422F00A72A24 /* BaseTableViewCell.swift in Sources */,

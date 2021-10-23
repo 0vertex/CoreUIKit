@@ -60,7 +60,7 @@ public extension UILayoutGuide {
                  relation: ConstraintRelation = .equal,
                  margin: CGFloat = .zero) -> Self {
         let leadingAnchor = self.leadingAnchor.constraint(with: relation, on: anchor, margin: margin)
-        self.setConstraintIdentifier(for: "leading", for: leadingAnchor)
+        self.setConstraintIdentifier(for: .leading, for: leadingAnchor)
         
         leadingAnchor.isActive = true
         
@@ -78,7 +78,7 @@ public extension UILayoutGuide {
                   relation: ConstraintRelation = .equal,
                   margin: CGFloat = .zero) -> Self {
         let trailingAnchor = self.trailingAnchor.constraint(with: relation, on: anchor, margin: -margin)
-        self.setConstraintIdentifier(for: "trailing", for: trailingAnchor)
+        self.setConstraintIdentifier(for: .trailing, for: trailingAnchor)
         
         trailingAnchor.isActive = true
         
@@ -96,7 +96,7 @@ public extension UILayoutGuide {
              relation: ConstraintRelation = .equal,
              margin: CGFloat = .zero) -> Self {
         let topAnchor = self.topAnchor.constraint(with: relation, on: anchor, margin: margin)
-        self.setConstraintIdentifier(for: "top", for: topAnchor)
+        self.setConstraintIdentifier(for: .top, for: topAnchor)
         
         topAnchor.isActive = true
         
@@ -114,7 +114,7 @@ public extension UILayoutGuide {
                 relation: ConstraintRelation = .equal,
                 margin: CGFloat = .zero) -> Self {
         let bottomAnchor = self.bottomAnchor.constraint(with: relation, on: anchor, margin: -margin)
-        self.setConstraintIdentifier(for: "bottom", for: bottomAnchor)
+        self.setConstraintIdentifier(for: .bottom, for: bottomAnchor)
         
         bottomAnchor.isActive = true
         return self
@@ -131,14 +131,14 @@ public extension UILayoutGuide {
         
         if let safeWidth = width {
             let widthAnchor = self.widthAnchor.constraint(equalToConstant: safeWidth)
-            self.setConstraintIdentifier(for: "width", for: widthAnchor)
+            self.setConstraintIdentifier(for: .width, for: widthAnchor)
             
             widthAnchor.isActive = true
         }
         
         if let safeHeight = height {
             let heightAnchor = self.heightAnchor.constraint(equalToConstant: safeHeight)
-            self.setConstraintIdentifier(for: "height", for: heightAnchor)
+            self.setConstraintIdentifier(for: .height, for: heightAnchor)
             
             heightAnchor.isActive = true
         }
@@ -155,7 +155,7 @@ public extension UILayoutGuide {
     func centerX(with anchor: NSLayoutXAxisAnchor,
                  margin: CGFloat = .zero) -> Self {
         let centerXAnchor = self.centerXAnchor.constraint(equalTo: anchor, constant: margin)
-        self.setConstraintIdentifier(for: "centerX", for: centerXAnchor)
+        self.setConstraintIdentifier(for: .centerX, for: centerXAnchor)
         
         centerXAnchor.isActive = true
         
@@ -171,7 +171,7 @@ public extension UILayoutGuide {
     func centerY(with anchor: NSLayoutYAxisAnchor,
                  margin: CGFloat = .zero) -> Self {
         let centerYAnchor = self.centerYAnchor.constraint(equalTo: anchor, constant: margin)
-        self.setConstraintIdentifier(for: "centerY", for: centerYAnchor)
+        self.setConstraintIdentifier(for: .centerY, for: centerYAnchor)
         
         centerYAnchor.isActive = true
         
@@ -197,11 +197,10 @@ public extension UILayoutGuide {
 
 public extension UILayoutGuide {
     
-    func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint) {
+    func setConstraintIdentifier(for anchorType: AnchorType, for constraint: NSLayoutConstraint) {
+        if self.identifier.isEmpty { return }
         
-        if !self.identifier.isEmpty && !anchorType.isEmpty {
-            constraint.identifier = "\(self.identifier)_\(anchorType)Anchor"
-        }
+        constraint.identifier = anchorType.generateIdentifier(with: self.identifier)
     }
     
 }

@@ -49,5 +49,5 @@ public protocol Anchorable {
     @discardableResult
     func center(on parentView: UIView, with size: CGSize) -> Self
     
-    func setConstraintIdentifier(for anchorType: String, for constraint: NSLayoutConstraint)
+    func setConstraintIdentifier(for anchorType: AnchorType, for constraint: NSLayoutConstraint)
 }
